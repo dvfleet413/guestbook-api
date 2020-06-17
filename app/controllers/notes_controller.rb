@@ -14,7 +14,7 @@ class NotesController < ApplicationController
         note = Note.create!(notes_params)
         if note.save
             render json: note.to_json
-        else
+        end
     end
 
     def update
