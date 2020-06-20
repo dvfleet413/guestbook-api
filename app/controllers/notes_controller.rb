@@ -12,6 +12,7 @@ class NotesController < ApplicationController
 
     def create
         note = Note.create!(notes_params)
+        
         if note.save
             render json: note.to_json
         end
